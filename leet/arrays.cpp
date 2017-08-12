@@ -1,7 +1,5 @@
-//int singleNonDuplicate(vector<int>& nums)
-int test()
+#include "utils.h"
+void hello(const char *arg)
 {
-	int res = 0;
-	return res;
-
+	printf("Hello %s\n", arg);
 }

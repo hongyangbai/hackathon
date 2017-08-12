@@ -1,3 +1,4 @@
+AR = ar
 CXX = g++
 CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-sign-compare
 OBJ_DIR = ./
@@ -8,7 +9,8 @@ SOURCE =  $(wildcard *.cpp)
 OBJ := $(addprefix $(OBJ_DIR), $(notdir $(patsubst %.cpp, %.o, $(SOURCE))))
 EXE = thor
 
-.PHONY: $(OBJ)
+libleet.a: $(OBJ)
+	$(AR) rcu $@ $(OBJ)
 
 $(OBJ): $(SOURCE)
 	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) -c $< -o $@
