@@ -1,10 +1,7 @@
-CXX = g++
-CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-sign-compare
-OBJ_DIR = ./
-INCLUDE_DIR = ../include/ 
-INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
+include ../build/Makefile.share
+
 SOURCE =  $(wildcard *.cpp) 
-OBJ := $(addprefix $(OBJ_DIR), $(notdir $(patsubst %.cpp, %.o, $(SOURCE))))
+OBJ = $(patsubst %.cpp, %.o, $(SOURCE))
 EXE = thor
 
 $(EXE): $(OBJ) 

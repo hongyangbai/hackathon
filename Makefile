@@ -13,9 +13,12 @@ subdirs: $(SUBDIRS)
 thor: leet
 
 $(SUBDIRS):
-	$(MAKE) --no-print-directory -C $@
+	@for dir in $(SUBDIRS); do \
+		$(MAKE) --no-print-directory -C $$dir; \
+	done
+#$(MAKE) --no-print-directory -C $@
 
-.PHONY: thor clean
+.PHONY: clean
 
 clean:
 	@for dir in $(SUBDIRS); do \
