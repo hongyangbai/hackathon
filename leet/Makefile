@@ -7,7 +7,7 @@ libleet.a: $(OBJ)
 	$(AR) rcu $@ $(OBJ)
 
 $(OBJ): $(SOURCE)
-	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) -c $< -o $@
+	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) -c $< -o $@
 
 .PHONY: clean
 

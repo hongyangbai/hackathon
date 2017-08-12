@@ -1,5 +1,10 @@
 #include "utils.h"
-void hello(const char *arg)
+
+using namespace std;
+
+int singleNonDuplicate(vector<int>& nums)
 {
-	printf("Hello %s\n", arg);
+	int res = 0;
+	
+	return res;
 }

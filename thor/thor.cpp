@@ -1,9 +1,12 @@
 #include "solution.h"
 
-void hello(const char *arg);
+using namespace std;
+
+int singleNonDuplicate(vector<int>& nums);
 
 int main(int argc, char *argv[])
 {	
-	hello("World");
+	vector<int> nums = {1,2,3};
+	cout<<singleNonDuplicate(nums)<<endl;
 	return 0;
 }
