@@ -1,6 +1,6 @@
 CXX = g++
 CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-unused-but-set-variable -Wno-sign-compare
-SOURCE_DIR = src/
+SOURCE_DIR = run/
 OBJ_DIR = obj/
 EXE_DIR = thor/
 INCLUDE_DIR = include/ 
@@ -12,7 +12,7 @@ EXE = thor
 $(EXE_DIR)$(EXE): $(OBJ)
 	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) $^ -o $@
 
-$(OBJ_DIR)%.o :$(SOURCE_DIR)%.cpp
+$(OBJ_DIR)%.o: $(SOURCE_DIR)%.cpp
 	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) -c $< -o $@
 
 .PHONY: clean
