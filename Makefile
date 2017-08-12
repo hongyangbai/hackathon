@@ -1,22 +1,23 @@
 CXX = g++
-CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-unused-but-set-variable -Wno-sign-compare
-SOURCE_DIR = run/
-OBJ_DIR = obj/
-EXE_DIR = thor/
-INCLUDE_DIR = include/ 
-INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
-SOURCE =  $(wildcard $(SOURCE_DIR)*.cpp) $(wildcard $(SOURCE_DIR)**/*.cpp)
-OBJ := $(addprefix $(OBJ_DIR), $(notdir $(patsubst %.cpp, %.o, $(SOURCE))))
-EXE = thor
+SUBDIRS = leet run
+SRC =  $(foreach sdir, $(SUBDIRS), $(wildcard $(sdir)/*.cpp))
+#OBJ = $(patsubst $(SUBDIRS)/%.cpp, $(SUBDIRS)/%.o, $(SRC))
 
-$(EXE_DIR)$(EXE): $(OBJ)
-	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) $^ -o $@
+#.PHONY: subdirs $(SUBDIRS)
 
-$(OBJ_DIR)%.o: $(SOURCE_DIR)%.cpp
-	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) -c $< -o $@
+#subdirs: $(SUBDIRS)
+
+#thor/thor: leet/run.o
+#	g++ run.o -o thor/thor
+
+#$(SUBDIRS):
+#	$(MAKE) -C $@
+
+all:
+	@echo $(SRC)
+
+thor/thor: run/run.o leet/arrays.o
+	g++ -o $@ $^
 
 .PHONY: clean
-
-clean:
-	rm -f $(OBJ)/* $(EXE_DIR)$(EXE)
-
+	rm thor/thor
