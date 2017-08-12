@@ -1,9 +1,7 @@
-#include "solution.h"
-
-int singleNonDuplicate(vector<int>& nums)
+//int singleNonDuplicate(vector<int>& nums)
+int test()
 {
-	int res;
-
+	int res = 0;
 	return res;
 
 }
