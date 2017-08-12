@@ -1,6 +1,6 @@
 CXX = g++
 CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-sign-compare
-OBJ_DIR = ../obj/leet/
+OBJ_DIR = ./
 EXE_DIR = thor/
 INCLUDE_DIR = include/ 
 INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
