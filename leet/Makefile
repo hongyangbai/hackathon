@@ -2,7 +2,7 @@ CXX = g++
 CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-sign-compare
 OBJ_DIR = ./
 EXE_DIR = thor/
-INCLUDE_DIR = include/ 
+INCLUDE_DIR = ../include/ 
 INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
 SOURCE =  $(wildcard *.cpp) 
 OBJ := $(addprefix $(OBJ_DIR), $(notdir $(patsubst %.cpp, %.o, $(SOURCE))))
@@ -16,4 +16,4 @@ $(OBJ): $(SOURCE)
 .PHONY: clean
 
 clean:
-	rm $(OBJ_DIR)*
+	rm *.o

@@ -1,23 +1,23 @@
 CXX = g++
+CFLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-unused-but-set-variable -Wno-sign-compare
 SUBDIRS = leet run
 SRC =  $(foreach sdir, $(SUBDIRS), $(wildcard $(sdir)/*.cpp))
-#OBJ = $(patsubst $(SUBDIRS)/%.cpp, $(SUBDIRS)/%.o, $(SRC))
+OBJ = $(patsubst %.cpp, %.o, $(SRC))
+INCLUDE_DIR = include/ 
+INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
 
-#.PHONY: subdirs $(SUBDIRS)
+.PHONY: thor/thor subdirs $(SUBDIRS) $(OBJ)
 
-#subdirs: $(SUBDIRS)
+default: thor/thor
+subdirs: $(SUBDIRS)
 
-#thor/thor: leet/run.o
-#	g++ run.o -o thor/thor
+$(SUBDIRS):
+	$(MAKE) --no-print-directory -C $@
 
-#$(SUBDIRS):
-#	$(MAKE) -C $@
+thor/thor: $(OBJ)
+	$(CXX) $(CFLAGS) $(INCLUDE_FLAG) $(OBJ) -o $@
 
-all:
-	@echo $(SRC)
-
-thor/thor: run/run.o leet/arrays.o
-	g++ -o $@ $^
-
-.PHONY: clean
-	rm thor/thor
+clean:
+	@for dir in $(SUBDIRS); do \
+		$(MAKE) --no-print-directory clean -C $$dir; \
+	done

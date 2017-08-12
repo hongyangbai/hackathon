@@ -16,4 +16,4 @@ $(OBJ): $(SOURCE)
 .PHONY: clean
 
 clean:
-	rm $(OBJ_DIR)*
+	rm *.o
