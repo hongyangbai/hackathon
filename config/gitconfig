@@ -1,0 +1,10 @@
+[user]
+	name = hongyangbai
+	email = hongyangbai@gmail.com
+
+[core]
+	editor = vim
+
+[alias]
+	st = status
+	ci = commit
