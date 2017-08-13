@@ -13,4 +13,3 @@ $(OBJ): $(SOURCE)
 
 clean:
 	rm -f *.o
-	rm *.a

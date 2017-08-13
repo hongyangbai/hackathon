@@ -1,8 +1,6 @@
-#include "utils.h"
+#include "Solution.h"
 
-using namespace std;
-
-int singleNonDuplicate(vector<int>& nums)
+int Solution::singleNonDuplicate(vector<int>& nums)
 {
 	if(nums.empty())	return 0;
 	int l = 0;

@@ -1,7 +1,7 @@
 AR = ar
 CXX = g++
 CPP_FLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-sign-compare
-INCLUDE_DIR = ../include/ 
+INCLUDE_DIR = ../include/ ../leet/
 INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
 LIB = leet
 LIBDIR_FLAG = $(addprefix -L../, $(LIB))
