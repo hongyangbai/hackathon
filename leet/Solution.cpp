@@ -50,3 +50,9 @@ TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
 {
 	return NULL;
 }
+
+
+string replaceWords(vector<string>& dict, string sentence)
+{
+
+}

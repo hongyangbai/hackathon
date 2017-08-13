@@ -13,4 +13,5 @@ public:
 
  	int singleNonDuplicate(vector<int>& nums);
 	TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder);
+	string replaceWords(vector<string>& dict, string sentence);
 };
