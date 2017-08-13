@@ -1,5 +1,14 @@
 #include "Solution.h"
 
+Solution* Solution::s = 0;
+
+Solution* Solution::instance()
+{
+	if(s == NULL)
+		s = new Solution();
+	return s;
+}
+
 int Solution::singleNonDuplicate(vector<int>& nums)
 {
 	if(nums.empty())	return 0;
@@ -35,4 +44,9 @@ int Solution::singleNonDuplicate(vector<int>& nums)
 	}
 	
 	return nums[i];
+}
+
+TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
+{
+	return NULL;
 }

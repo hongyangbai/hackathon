@@ -16,5 +16,6 @@
 #include <queue>
 #include <sstream>
 #include <iterator>
+#include "bt.h"
 
 inline int sq(int x) {	return x*x;	}

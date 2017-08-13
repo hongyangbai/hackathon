@@ -13,4 +13,5 @@ $(OBJ): $(SOURCE) ../leet/libleet.a
 .PHONY: clean
 
 clean:
-	rm *.o & rm thor
+	rm -f *.o
+	rm -f thor
