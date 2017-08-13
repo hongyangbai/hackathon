@@ -15,6 +15,7 @@
 #include <string.h>
 #include <queue>
 #include <sstream>
+#include <sstream>
 #include <iterator>
 #include "bt.h"
 

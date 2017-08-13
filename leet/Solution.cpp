@@ -46,15 +46,38 @@ int Solution::singleNonDuplicate(vector<int>& nums)
 	return nums[i];
 }
 
-TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
+TreeNode* Solution::buildTree(vector<int>& inorder, vector<int>& postorder)
 {
 	return NULL;
 }
 
-
-string replaceWords(vector<string>& dict, string sentence)
+string Solution::replaceWords(vector<string>& dict, string sentence)
 {
-	string s;
-	return s;
+	string res;
+	istringstream iss(sentence);
+	vector<string> tokens;
+	copy(istream_iterator<string>(iss), istream_iterator<string>(), back_inserter(tokens));
+	for(int i = 0; i < tokens.size(); ++i)
+	{
+		int suc = -1;
+		int shortest = INT_MAX;
+		for(int j = 0; j < dict.size(); ++j)
+		{
+			if(tokens[i].substr(0, dict[j].length()) == dict[j])
+			{
+				if(dict[j].length() < shortest)
+				{
+					shortest = dict[j].length();
+					suc = j;
+				}
+			}
+		}
+		if(suc > -1)
+			res += dict[suc];
+		else
+			res += tokens[i];
+		res += " ";
+	}
 
+	return res.substr(0, res.length()-1);
 }
