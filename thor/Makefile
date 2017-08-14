@@ -5,9 +5,10 @@ OBJ = $(patsubst %.cpp, %.o, $(SOURCE))
 EXE = thor
 
 $(EXE): $(OBJ)
-	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $^ $(LIBDIR_FLAG) $(LIB_FLAG) -o $@
+	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $^ $(LIB_FLAG) -o $@
+#$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $^ $(LIBDIR_FLAG) $(LIB_FLAG) -o $@
 
-$(OBJ): $(SOURCE) ../leet/libleet.a
+$(OBJ): $(SOURCE) ../leet/leet.a
 	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) -c $< -o $@
 
 .PHONY: clean

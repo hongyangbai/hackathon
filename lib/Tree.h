@@ -13,6 +13,7 @@ struct TreeNode
 
 class Tree
 {
-
 public:
+	Tree() {}
+	void insertNode();
 };

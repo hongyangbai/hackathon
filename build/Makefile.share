@@ -3,6 +3,6 @@ CXX = g++
 CPP_FLAGS=-Wall -std=c++11 -Wno-unused-variable -Wno-sign-compare
 INCLUDE_DIR = ../include/ ../leet/ ../lib/
 INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
-LIB = leet lib
+LIB = leet/leet.a lib/lib.a
 LIBDIR_FLAG = $(addprefix -L../, $(LIB))
-LIB_FLAG = $(addprefix -l, $(LIB))
+LIB_FLAG = $(addprefix ../, $(LIB))

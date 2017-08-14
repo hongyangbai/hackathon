@@ -3,7 +3,7 @@ include ../build/Makefile.share
 SOURCE =  $(wildcard *.cpp) 
 OBJ = $(patsubst %.cpp, %.o, $(SOURCE))
 
-liblib.a: $(OBJ)
+lib.a: $(OBJ)
 	$(AR) cr $@ $(OBJ)
 
 $(OBJ): $(SOURCE)
