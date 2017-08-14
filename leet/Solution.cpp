@@ -106,6 +106,7 @@ int Solution::findLongestChain(vector<vector<int>>& pairs)
 
 vector<vector<int>> Solution::findSubsequences(vector<int>& nums)
 {
-	int *x = char;
 
+	vector<vector<int>> res;
+	return res;
 }
