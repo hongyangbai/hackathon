@@ -81,3 +81,31 @@ string Solution::replaceWords(vector<string>& dict, string sentence)
 
 	return res.substr(0, res.length()-1);
 }
+
+bool Solution::pairComp(vector<int> a, vector<int> b)
+{
+	return a[1] == b[1] ? a[0] < b[0] : a[1]<b[1];
+}
+
+int Solution::findLongestChain(vector<vector<int>>& pairs)
+{
+	int counter = 0;
+	vector<int> pre = pairs[0];
+	sort(pairs.begin(), pairs.end(), pairComp);
+	for(int i = 0; i < pairs.size(); ++i)
+	{
+		if(i == 0 || pairs[i][0]>pre[1])
+		{
+			++counter;
+			pre = pairs[i];
+		}
+	}
+
+	return counter;
+}
+
+vector<vector<int>> Solution::findSubsequences(vector<int>& nums)
+{
+	int *x = char;
+
+}
