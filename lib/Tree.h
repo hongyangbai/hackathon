@@ -1,7 +1,6 @@
 #pragma once
-#include "utils.h"
 
-using namespace std;
+#include "utils.h"
 
 struct TreeNode
 {
@@ -10,4 +9,10 @@ struct TreeNode
 	TreeNode *right;
 
 	TreeNode(int v) : val(v), left(NULL), right(NULL) {}
+};
+
+class Tree
+{
+
+public:
 };

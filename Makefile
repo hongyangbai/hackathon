@@ -1,8 +1,9 @@
 include build/Makefile.share
 
-SUBDIRS = leet thor
+SUBDIRS = lib leet thor
 
 thor: leet
+leet: lib
 .PHONY: subdirs $(SUBDIRS) clean
 
 

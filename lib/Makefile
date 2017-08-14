@@ -3,8 +3,8 @@ include ../build/Makefile.share
 SOURCE =  $(wildcard *.cpp) 
 OBJ = $(patsubst %.cpp, %.o, $(SOURCE))
 
-libleet.a: $(OBJ)
-	$(AR) rcu $@ $(OBJ)
+liblib.a: $(OBJ)
+	$(AR) cr $@ $(OBJ)
 
 $(OBJ): $(SOURCE)
 	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) -c $< -o $@
@@ -13,3 +13,4 @@ $(OBJ): $(SOURCE)
 
 clean:
 	rm -f *.o
+	rm -f *.a

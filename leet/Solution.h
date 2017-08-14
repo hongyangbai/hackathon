@@ -1,6 +1,7 @@
 #pragma once
 
 #include "utils.h"
+#include "Tree.h"
 
 using namespace std;
 
