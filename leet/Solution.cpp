@@ -84,7 +84,7 @@ string Solution::replaceWords(vector<string>& dict, string sentence)
 
 bool Solution::pairComp(vector<int> a, vector<int> b)
 {
-	return a[1] == b[1] ? a[0] < b[0] : a[1]<b[1];
+	return (a[1] == b[1] ? a[0] < b[0] : a[1]<b[1]);
 }
 
 int Solution::findLongestChain(vector<vector<int>>& pairs)
@@ -106,7 +106,6 @@ int Solution::findLongestChain(vector<vector<int>>& pairs)
 
 vector<vector<int>> Solution::findSubsequences(vector<int>& nums)
 {
-
 	vector<vector<int>> res;
 	return res;
 }

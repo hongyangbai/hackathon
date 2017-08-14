@@ -9,7 +9,7 @@ thor: leet
 subdirs: $(SUBDIRS)
 
 $(SUBDIRS):
-	        $(MAKE) -C $@
+	$(MAKE) -C $@
 
 clean:
 	@for dir in $(SUBDIRS); do \
