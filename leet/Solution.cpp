@@ -104,8 +104,29 @@ int Solution::findLongestChain(vector<vector<int>>& pairs)
 	return counter;
 }
 
+void Solution::backTracking(vector<int>& nums, vector<vector<int>>& res, vector<int>& cur, int s)
+{
+	if(cur.size() > 1)
+		res.push_back(cur);
+
+	unordered_set<int> uni;
+	for(int i = s; i < nums.size(); ++i)
+	{
+		if(s > 0 && nums[i] < nums[s-1])	continue;
+		if(uni.find(nums[i]) == uni.end())
+		{
+			uni.insert(nums[i]);
+			cur.push_back(nums[i]);
+			backTracking(nums, res, cur, i+1);
+			cur.pop_back();
+		}
+	}
+}
+
 vector<vector<int>> Solution::findSubsequences(vector<int>& nums)
 {
+	vector<int> cur;
 	vector<vector<int>> res;
+	backTracking(nums, res, cur, 0);
 	return res;
 }

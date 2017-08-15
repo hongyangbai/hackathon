@@ -11,8 +11,10 @@ class Solution
 
 	// Singleton implementation
 	Solution() {}
-	
+
+	// Helpers information
 	static bool pairComp(vector<int> a, vector<int> b);
+	void backTracking(vector<int>& nums, vector<vector<int>>& res, vector<int>& cur, int s);
 
 public:
 	static Solution *instance();
