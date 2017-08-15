@@ -130,3 +130,8 @@ vector<vector<int>> Solution::findSubsequences(vector<int>& nums)
 	backTracking(nums, res, cur, 0);
 	return res;
 }
+
+int findTargetSumWays(vector<int>& nums, int S)
+{
+	return 0;
+}

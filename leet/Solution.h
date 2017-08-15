@@ -27,4 +27,5 @@ public:
  	int singleNonDuplicate(vector<int>& nums);
 	int findLongestChain(vector<vector<int>>& pairs);
 	vector<vector<int>> findSubsequences(vector<int>& nums);
+	int findTargetSumWays(vector<int>& nums, int S);
 };
