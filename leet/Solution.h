@@ -5,6 +5,8 @@
 
 using namespace std;
 
+extern const char* homedir;
+
 class Solution
 {
 	static Solution *s;
@@ -19,6 +21,9 @@ class Solution
 public:
 	static Solution *instance();
 
+	// Runner
+	void run(const char *pname);
+	
 	// Easy leet problems
 	TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder);
 	string replaceWords(vector<string>& dict, string sentence);

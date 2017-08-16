@@ -9,6 +9,37 @@ Solution* Solution::instance()
 	return s;
 }
 
+void Solution::run(const char* pname)
+{
+	DIR *dir;
+	struct dirent *ent;
+	bool found = false;
+
+	char ppath[100];
+	sprintf(ppath, "%s%s", homedir, "/work/hackathon/leet/problems/");
+	vector<string> availpnames;
+	if ((dir = opendir (ppath)) != NULL) {
+		while ((ent = readdir (dir)) != NULL) 
+		{
+			if(strcmp(".", ent->d_name) == 0 || strcmp("..", ent->d_name) == 0)
+				continue;
+			availpnames.push_back(string(ent->d_name));
+			if(strcmp(ent->d_name, pname) == 0)
+				found = true;
+		}
+		closedir (dir);
+	}
+
+	if(found)
+		printf("Running solution for [%s]:\n", pname);
+	else
+	{
+		printf("Error: problem solution not created yet, available problems:\n");
+		for(int i = 0; i < availpnames.size(); ++i)
+			printf("%d. %s\n", i+1, availpnames[i].c_str());
+	}
+}
+
 int Solution::singleNonDuplicate(vector<int>& nums)
 {
 	if(nums.empty())	return 0;
@@ -131,7 +162,22 @@ vector<vector<int>> Solution::findSubsequences(vector<int>& nums)
 	return res;
 }
 
-int findTargetSumWays(vector<int>& nums, int S)
+void dfs(int target, vector<int>& nums, int s, int& res)
 {
-	return 0;
+	if(s == nums.size())
+	{
+		if(target == 0)
+			++res;
+		return;
+	}
+	
+	dfs(target-nums[s], nums, s+1, res);
+	dfs(target+nums[s], nums, s+1, res);
+}
+
+int Solution::findTargetSumWays(vector<int>& nums, int S)
+{
+	int res = 0;
+	dfs(S, nums, 0, res);
+	return res;
 }

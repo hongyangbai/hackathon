@@ -17,5 +17,11 @@
 #include <sstream>
 #include <sstream>
 #include <iterator>
+#include <typeinfo>
+#include <cassert>
+#include "dirent.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <pwd.h>
 
 inline int sq(int x) {	return x*x;	}
