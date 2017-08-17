@@ -12,5 +12,5 @@ $(OBJ): $(SOURCE)
 .PHONY: clean
 
 clean:
-	rm -f *.o
-	rm -f *.a
+	rm -f $(OBJ)
+	rm -f leet.a

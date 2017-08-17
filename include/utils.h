@@ -23,5 +23,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <pwd.h>
+#include <numeric>
 
 inline int sq(int x) {	return x*x;	}

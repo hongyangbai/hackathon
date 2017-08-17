@@ -31,7 +31,9 @@ void Solution::run(const char* pname)
 	}
 
 	if(found)
+	{
 		printf("Running solution for [%s]:\n", pname);
+	}
 	else
 	{
 		printf("Error: problem solution not created yet, available problems:\n");

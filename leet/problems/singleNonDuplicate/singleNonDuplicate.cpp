@@ -1,0 +1,4 @@
+class singleNanDuplicate : public Solution
+{
+
+};
