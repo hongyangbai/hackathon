@@ -6,3 +6,4 @@ INCLUDE_FLAG = $(addprefix -I, $(INCLUDE_DIR))
 LIB = leet/leet.a lib/lib.a
 LIBDIR_FLAG = $(addprefix -L../, $(LIB))
 LIB_FLAG = $(addprefix ../, $(LIB))
+

@@ -6,7 +6,6 @@ thor: leet
 leet: lib
 .PHONY: subdirs $(SUBDIRS) clean
 
-
 subdirs: $(SUBDIRS)
 
 $(SUBDIRS):

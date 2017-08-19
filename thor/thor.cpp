@@ -1,4 +1,4 @@
-#include "Solution.h"
+#include "LeetRunner.h"
 
 using namespace std;
 
@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 			printf("usage: thor [leet | ...] [problem name]\n");
 			return 0;
 		}
-		Solution::instance()->run(argv[2]);
+		LeetRunner runner;
+		runner.solve(argv[2]);
 	}
 	else
 		printf("Error: unrecognized operation type\n");

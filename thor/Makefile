@@ -4,15 +4,17 @@ SOURCE =  $(wildcard *.cpp)
 OBJ = $(patsubst %.cpp, %.o, $(SOURCE))
 EXE = thor
 
+PROB_DIRS = $(wildcard ../leet/problems/*)
+PROB_INCLUDE = $(addprefix -I, $(PROB_DIRS))
+
 $(EXE): $(OBJ)
 	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $^ $(LIB_FLAG) -o $@
-#$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $^ $(LIBDIR_FLAG) $(LIB_FLAG) -o $@
 
 $(OBJ): $(SOURCE) ../leet/leet.a
-	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) -c $< -o $@
+	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $(PROB_INCLUDE) -c $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 	rm -f thor
