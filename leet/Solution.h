@@ -9,5 +9,5 @@ class Solution
 public:
 	Solution();
 	~Solution() {}
-	virtual void say() = 0;
+	virtual void solve() = 0;
 };

@@ -1,6 +1,5 @@
 #include "singleNonDuplicate.h"
 
-void singleNonDuplicate::say()
+void singleNonDuplicate::solve()
 {
-	cout<<"singleNonDuplicate"<<endl;
 }

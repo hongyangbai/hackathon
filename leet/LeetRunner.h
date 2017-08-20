@@ -2,6 +2,7 @@
 #include "Solution.h"
 #include "complexNumberMultiply.h"
 #include "singleNonDuplicate.h"
+#include "countBattleships.h"
 
 using namespace std;
 

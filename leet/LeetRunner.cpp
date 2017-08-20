@@ -23,7 +23,7 @@ void LeetRunner::solve(const char* pname)
 	if(s != NULL)
 	{
 		printf("Running solution for [%s]:\n", pname);
-		s->say();
+		s->solve();
 	}
 	else
 	{
@@ -39,6 +39,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new complexNumberMultiply;
 	else if(strcmp(pname, "singleNonDuplicate") == 0)
 		return new singleNonDuplicate;
+	else if(strcmp(pname, "countBattleships") == 0)
+		return new countBattleships;
 	else
 		return nullptr;
 }

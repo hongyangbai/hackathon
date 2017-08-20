@@ -1,5 +1,4 @@
 #include "complexNumberMultiply.h"
-void complexNumberMultiply::say()
+void complexNumberMultiply::solve()
 {
-	cout<<"complex number multiply"<<endl;
 }
