@@ -41,6 +41,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new singleNonDuplicate;
 	else if(strcmp(pname, "countBattleships") == 0)
 		return new countBattleships;
+	else if(strcmp(pname, "reconstructQueue") == 0)
+		return new reconstructQueue;
 	else
 		return nullptr;
 }

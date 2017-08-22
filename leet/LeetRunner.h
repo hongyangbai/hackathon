@@ -3,6 +3,7 @@
 #include "complexNumberMultiply.h"
 #include "singleNonDuplicate.h"
 #include "countBattleships.h"
+#include "reconstructQueue.h"
 
 using namespace std;
 
