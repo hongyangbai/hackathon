@@ -43,6 +43,10 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new countBattleships;
 	else if(strcmp(pname, "reconstructQueue") == 0)
 		return new reconstructQueue;
+	else if(strcmp(pname, "tinyURL") == 0)
+		return new tinyURL;
+	else if(strcmp(pname, "twoKeys") == 0)
+		return new twoKeys;
 	else
 		return nullptr;
 }

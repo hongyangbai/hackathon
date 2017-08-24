@@ -4,6 +4,8 @@
 #include "singleNonDuplicate.h"
 #include "countBattleships.h"
 #include "reconstructQueue.h"
+#include "tinyURL.h"
+#include "twoKeys.h"
 
 using namespace std;
 
