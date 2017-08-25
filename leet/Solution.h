@@ -9,6 +9,6 @@ class Solution
 {
 public:
 	Solution();
-	~Solution() {}
+	virtual ~Solution() {}
 	virtual void solve() = 0;
 };

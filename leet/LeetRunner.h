@@ -6,6 +6,7 @@
 #include "reconstructQueue.h"
 #include "tinyURL.h"
 #include "twoKeys.h"
+#include "numMatrix.h"
 
 using namespace std;
 

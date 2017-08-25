@@ -31,6 +31,8 @@ void LeetRunner::solve(const char* pname)
 		for(int i = 0; i < availpnames.size(); ++i)
 			printf("%d. %s\n", i+1, availpnames[i].c_str());
 	}
+
+	delete s;
 }
 
 Solution* LeetRunner::createNewSolution(const char* pname)
@@ -47,6 +49,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new tinyURL;
 	else if(strcmp(pname, "twoKeys") == 0)
 		return new twoKeys;
+	else if(strcmp(pname, "numMatrix") == 0)
+		return new numMatrix;
 	else
 		return nullptr;
 }
