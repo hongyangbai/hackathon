@@ -8,9 +8,6 @@ OBJ = $(PROB_OBJ)
 OBJ := $(OBJ) $(patsubst %.cpp, %.o, $(SOURCE))
 PROB_INCLUDE = $(addprefix -I, $(PROB_DIRS))
 
-#all:
-#	@echo $(PROB_OBJ)
-
 leet.a: $(OBJ)
 	$(AR) cr $@ $(OBJ)
 

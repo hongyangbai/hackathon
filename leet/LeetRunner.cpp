@@ -51,6 +51,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new twoKeys;
 	else if(strcmp(pname, "numMatrix") == 0)
 		return new numMatrix;
+	else if(strcmp(pname, "findMaxForm") == 0)
+		return new findMaxForm;
 	else
 		return nullptr;
 }

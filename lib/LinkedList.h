@@ -1,5 +1,7 @@
 #pragma once
 
+#include "utils.h"
+
 struct ListNode
 {
 	int val;
@@ -7,3 +9,9 @@ struct ListNode
 	ListNode(int x) : val(x), next(NULL) {}
 };
 
+class LinkedList
+{
+	ListNode* head;
+public:
+	void insert(ListNode *node);
+};

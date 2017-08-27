@@ -1,3 +1,5 @@
+#pragma once
+
 #include "utils.h"
 #include "Solution.h"
 #include "complexNumberMultiply.h"
@@ -7,6 +9,7 @@
 #include "tinyURL.h"
 #include "twoKeys.h"
 #include "numMatrix.h"
+#include "findMaxForm.h"
 
 using namespace std;
 
