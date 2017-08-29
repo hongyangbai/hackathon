@@ -53,6 +53,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new numMatrix;
 	else if(strcmp(pname, "findMaxForm") == 0)
 		return new findMaxForm;
+	else if(strcmp(pname, "wiggleMaxLength") == 0)
+		return new wiggleMaxLength;
 	else
 		return nullptr;
 }

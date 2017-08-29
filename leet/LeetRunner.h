@@ -10,6 +10,7 @@
 #include "twoKeys.h"
 #include "numMatrix.h"
 #include "findMaxForm.h"
+#include "wiggleMaxLength.h"
 
 using namespace std;
 
