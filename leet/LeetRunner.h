@@ -11,6 +11,7 @@
 #include "numMatrix.h"
 #include "findMaxForm.h"
 #include "wiggleMaxLength.h"
+#include "predictTheWinner.h"
 
 using namespace std;
 

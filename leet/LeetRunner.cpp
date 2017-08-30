@@ -55,6 +55,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new findMaxForm;
 	else if(strcmp(pname, "wiggleMaxLength") == 0)
 		return new wiggleMaxLength;
+	else if(strcmp(pname, "predictTheWinner") == 0)
+		return new predictTheWinner;
 	else
 		return nullptr;
 }
