@@ -57,6 +57,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new wiggleMaxLength;
 	else if(strcmp(pname, "predictTheWinner") == 0)
 		return new predictTheWinner;
+	else if(strcmp(pname, "findUnsortedSubarray") == 0)
+		return new findUnsortedSubarray;
 	else
 		return nullptr;
 }
