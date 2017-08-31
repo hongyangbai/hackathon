@@ -13,6 +13,7 @@
 #include "wiggleMaxLength.h"
 #include "predictTheWinner.h"
 #include "findUnsortedSubarray.h"
+#include "findMaxLength.h"
 
 using namespace std;
 
