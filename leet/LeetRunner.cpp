@@ -61,6 +61,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new findUnsortedSubarray;
 	else if(strcmp(pname, "findMaxLength") == 0)
 		return new findMaxLength;
+	else if(strcmp(pname, "removeKdigits") == 0)
+		return new removeKdigits;
 	else
 		return nullptr;
 }

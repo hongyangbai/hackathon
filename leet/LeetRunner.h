@@ -14,6 +14,7 @@
 #include "predictTheWinner.h"
 #include "findUnsortedSubarray.h"
 #include "findMaxLength.h"
+#include "removeKdigits.h"
 
 using namespace std;
 
