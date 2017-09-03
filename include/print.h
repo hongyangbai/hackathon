@@ -1,9 +1,35 @@
 #pragma once
 #include <iostream>
+#include <ostream>
 
 using namespace std;
 
-void print(const vector<int>& v)
+inline ostream& operator<<(ostream& os, const vector<int>& v)
+{
+	for(int i = 0; i < v.size(); ++i)
+	{
+		if(i == v.size()-1)
+			os<<v[i];
+		else
+			os<<v[i]<<", ";
+	}
+	os<<endl;
+}
+
+inline ostream& operator<<(ostream& os, ListNode* n)
+{
+	while(n)
+	{
+		if(n->next)
+			os<<n->val<<" <- ";
+		else
+			os<<n->val;
+		n = n->next;
+	}
+	os<<endl;
+}
+
+inline void print(const vector<int>& v)
 {
 	for(int i = 0; i < v.size(); ++i)
 	{
@@ -15,7 +41,7 @@ void print(const vector<int>& v)
 	printf("\n");
 }
 
-void print(const vector<pair<int, int>>& v)
+inline void print(const vector<pair<int, int>>& v)
 {
 	for(int i = 0; i < v.size(); ++i)
 	{

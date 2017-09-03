@@ -1,14 +1,20 @@
 #include "LeetRunner.h"
+#include "AlgoRunner.h"
 
 using namespace std;
 
 const char* homedir;
 
+void errorPrintUsage()
+{
+	printf("usage: thor [leet | algo | ...] [problem | algorithm | ...]\n");
+}
+
 int main(int argc, char *argv[])
 {	
 	if(argc < 2)
 	{
-		printf("usage: thor [leet | ...] [problem name]\n");
+		errorPrintUsage();
 		return 0;
 	}
 
@@ -20,10 +26,20 @@ int main(int argc, char *argv[])
 	{
 		if(argc < 3)
 		{
-			printf("usage: thor [leet | ...] [problem name]\n");
+			errorPrintUsage();
 			return 0;
 		}
 		LeetRunner runner;
+		runner.run(argv[2]);
+	}
+	else if(strcmp(argv[1], "algo") == 0)
+	{
+		if(argc < 3)
+		{
+			errorPrintUsage();
+			return 0;
+		}
+		AlgoRunner runner;
 		runner.run(argv[2]);
 	}
 	else
