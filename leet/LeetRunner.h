@@ -15,6 +15,7 @@
 #include "findUnsortedSubarray.h"
 #include "findMaxLength.h"
 #include "removeKdigits.h"
+#include "mergeKLists.h"
 
 using namespace std;
 
@@ -24,5 +25,5 @@ class LeetRunner
 {
 	Solution* createNewSolution(const char *pname);
 public:
-	void solve(const char *pname);
+	void run(const char *pname);
 };

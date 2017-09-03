@@ -1,6 +1,6 @@
 #include "LeetRunner.h"
 
-void LeetRunner::solve(const char* pname)
+void LeetRunner::run(const char* pname)
 {
 	DIR *dir;
 	struct dirent *ent;
@@ -63,6 +63,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new findMaxLength;
 	else if(strcmp(pname, "removeKdigits") == 0)
 		return new removeKdigits;
+	else if(strcmp(pname, "mergeKLists") == 0)
+		return new mergeKLists;
 	else
 		return nullptr;
 }

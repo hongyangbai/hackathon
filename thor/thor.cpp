@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 			return 0;
 		}
 		LeetRunner runner;
-		runner.solve(argv[2]);
+		runner.run(argv[2]);
 	}
 	else
 		printf("Error: unrecognized operation type\n");
