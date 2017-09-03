@@ -12,7 +12,14 @@ struct ListNode
 
 class LinkedList
 {
-	ListNode* head;
 public:
+	ListNode* head;
+	ListNode* tail;
+
+	LinkedList() : head(NULL), tail(NULL) {}
+	~LinkedList();
+
 	void insert(ListNode *node);
+	void insert(int val);
+	void print();
 };
