@@ -65,6 +65,10 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new removeKdigits;
 	else if(strcmp(pname, "mergeKLists") == 0)
 		return new mergeKLists;
+	else if(strcmp(pname, "updateBoard") == 0)
+		return new updateBoard;
+	else if(strcmp(pname, "findWords") == 0)
+		return new findWords;
 	else
 		return nullptr;
 }

@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
 #include <ostream>
+#include "LinkedList.h"
 
 using namespace std;
 
-inline ostream& operator<<(ostream& os, const vector<int>& v)
+template<typename T>
+inline ostream& operator<<(ostream& os, const vector<T>& v)
 {
 	for(int i = 0; i < v.size(); ++i)
 	{
@@ -14,6 +16,15 @@ inline ostream& operator<<(ostream& os, const vector<int>& v)
 			os<<v[i]<<", ";
 	}
 	os<<endl;
+	return os;
+}
+
+template<typename T>
+inline ostream& operator<<(ostream& os, const vector<vector<T>>& v)
+{
+	for(int i = 0; i < v.size(); ++i)
+		os<<v[i];
+	return os;
 }
 
 inline ostream& operator<<(ostream& os, ListNode* n)
@@ -21,12 +32,13 @@ inline ostream& operator<<(ostream& os, ListNode* n)
 	while(n)
 	{
 		if(n->next)
-			os<<n->val<<" <- ";
+			os<<n->val<<" -> ";
 		else
 			os<<n->val;
 		n = n->next;
 	}
 	os<<endl;
+	return os;
 }
 
 inline void print(const vector<int>& v)

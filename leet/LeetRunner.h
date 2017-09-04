@@ -16,6 +16,8 @@
 #include "findMaxLength.h"
 #include "removeKdigits.h"
 #include "mergeKLists.h"
+#include "updateBoard.h"
+#include "findWords.h"
 
 using namespace std;
 
