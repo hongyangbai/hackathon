@@ -69,6 +69,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new updateBoard;
 	else if(strcmp(pname, "findWords") == 0)
 		return new findWords;
+	else if(strcmp(pname, "nextGreaterElements") == 0)
+		return new nextGreaterElements;
 	else
 		return nullptr;
 }

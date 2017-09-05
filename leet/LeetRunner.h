@@ -18,6 +18,7 @@
 #include "mergeKLists.h"
 #include "updateBoard.h"
 #include "findWords.h"
+#include "nextGreaterElements.h"
 
 using namespace std;
 
