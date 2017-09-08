@@ -19,6 +19,7 @@
 #include "updateBoard.h"
 #include "findWords.h"
 #include "nextGreaterElements.h"
+#include "arrayNesting.h"
 
 using namespace std;
 

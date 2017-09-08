@@ -71,6 +71,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new findWords;
 	else if(strcmp(pname, "nextGreaterElements") == 0)
 		return new nextGreaterElements;
+	else if(strcmp(pname, "arrayNesting") == 0)
+		return new arrayNesting;
 	else
 		return nullptr;
 }
