@@ -20,6 +20,7 @@
 #include "findWords.h"
 #include "nextGreaterElements.h"
 #include "arrayNesting.h"
+#include "decodeString.h"
 
 using namespace std;
 

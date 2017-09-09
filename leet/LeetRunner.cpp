@@ -73,6 +73,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new nextGreaterElements;
 	else if(strcmp(pname, "arrayNesting") == 0)
 		return new arrayNesting;
+	else if(strcmp(pname, "decodeString") == 0)
+		return new decodeString;
 	else
 		return nullptr;
 }
