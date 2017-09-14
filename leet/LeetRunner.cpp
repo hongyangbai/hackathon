@@ -75,6 +75,10 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new arrayNesting;
 	else if(strcmp(pname, "decodeString") == 0)
 		return new decodeString;
+	else if(strcmp(pname, "longestIncreasingPath") == 0)
+		return new longestIncreasingPath;
+	else if(strcmp(pname, "buildTree") == 0)
+		return new buildTree;
 	else
 		return nullptr;
 }

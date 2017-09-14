@@ -21,6 +21,8 @@
 #include "nextGreaterElements.h"
 #include "arrayNesting.h"
 #include "decodeString.h"
+#include "longestIncreasingPath.h"
+#include "buildTree.h"
 
 using namespace std;
 
