@@ -11,9 +11,9 @@ ALGO_DIRS = $(wildcard ../algo/algorithms/*)
 ALGO_INCLUDE = $(addprefix -I, $(ALGO_DIRS))
 
 $(EXE): $(OBJ)
-	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $^ $(LIB_FLAG) -o $@
+	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) -o $@ $^ $(LIB_FLAG) 
 
-$(OBJ): $(SOURCE) ../lib/lib.a ../leet/leet.a ../algo/algo.a
+$(OBJ): $(SOURCE) ../leet/leet.a ../algo/algo.a ../lib/lib.a 
 	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) $(PROB_INCLUDE) $(ALGO_INCLUDE) -c $< -o $@
 
 .PHONY: clean

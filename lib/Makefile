@@ -6,7 +6,7 @@ OBJ = $(patsubst %.cpp, %.o, $(SOURCE))
 lib.a: $(OBJ)
 	$(AR) cr $@ $(OBJ)
 
-$(OBJ): $(SOURCE)
+%.o: %.cpp
 	$(CXX) $(CPP_FLAGS) $(INCLUDE_FLAG) -c $< -o $@
 
 .PHONY: clean
