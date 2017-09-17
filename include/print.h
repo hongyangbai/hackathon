@@ -27,6 +27,20 @@ inline ostream& operator<<(ostream& os, const vector<vector<T>>& v)
 	return os;
 }
 
+template<typename T>
+inline ostream& operator<<(ostream& os, const vector<pair<T, T>>& v)
+{
+	for(int i = 0; i < v.size(); ++i)
+	{
+		if(i == v.size()-1)
+			os<<"["<<v[i].first<<","<<v[i].second<<"]" ;
+		else
+			os<<"["<<v[i].first<<","<<v[i].second<<"], " ;
+	}
+	os<<endl;
+	return os;
+}
+
 inline ostream& operator<<(ostream& os, ListNode* n)
 {
 	while(n)

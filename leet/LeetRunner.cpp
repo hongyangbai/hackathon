@@ -79,6 +79,12 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new longestIncreasingPath;
 	else if(strcmp(pname, "buildTree") == 0)
 		return new buildTree;
+	else if(strcmp(pname, "findNumberOfLIS") == 0)
+		return new findNumberOfLIS;
+	else if(strcmp(pname, "findLonelyPixel") == 0)
+		return new findLonelyPixel;
+	else if(strcmp(pname, "maxKilledEnemies") == 0)
+		return new maxKilledEnemies;
 	else
 		return nullptr;
 }

@@ -23,6 +23,9 @@
 #include "decodeString.h"
 #include "longestIncreasingPath.h"
 #include "buildTree.h"
+#include "findNumberOfLIS.h"
+#include "findLonelyPixel.h"
+#include "maxKilledEnemies.h"
 
 using namespace std;
 
