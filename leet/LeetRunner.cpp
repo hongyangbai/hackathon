@@ -85,6 +85,14 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new findLonelyPixel;
 	else if(strcmp(pname, "maxKilledEnemies") == 0)
 		return new maxKilledEnemies;
+	else if(strcmp(pname, "wiggleSort") == 0)
+		return new wiggleSort;
+	else if(strcmp(pname, "lengthOfLongestSubstringTwoDistinct") == 0)
+		return new lengthOfLongestSubstringTwoDistinct;
+	else if(strcmp(pname, "lengthLongestPath") == 0)
+		return new lengthLongestPath;
+	else if(strcmp(pname, "gameOfLife") == 0)
+		return new gameOfLife;
 	else
 		return nullptr;
 }

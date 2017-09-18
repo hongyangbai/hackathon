@@ -26,6 +26,10 @@
 #include "findNumberOfLIS.h"
 #include "findLonelyPixel.h"
 #include "maxKilledEnemies.h"
+#include "wiggleSort.h"
+#include "lengthOfLongestSubstringTwoDistinct.h"
+#include "lengthLongestPath.h"
+#include "gameOfLife.h"
 
 using namespace std;
 
