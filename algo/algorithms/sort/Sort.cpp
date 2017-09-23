@@ -41,3 +41,32 @@ vector<int> mergeSort(vector<int> nums)
 {
 	return partition(nums, 0, nums.size()-1);
 }
+
+void heapify(vector<int>& nums, int n, int i)
+{
+	int l = 2*i + 1;
+	int r = 2*i + 2;
+
+	int largest = i;
+
+	largest = (l<n && nums[l]>nums[largest]) ? l:largest;
+	largest = (r<n && nums[r]>nums[largest]) ? r:largest;
+		
+	if(largest != i)
+	{
+		swap(nums[i], nums[largest]);
+		heapify(nums, n, largest);
+	}
+}
+
+void heapSort(vector<int>& nums)
+{
+	for(int i = nums.size()/2; i >= 0; --i)
+		heapify(nums, nums.size(), i);
+	for(int i = nums.size()-1; i>=0; --i)
+	{
+		swap(nums[i], nums[0]);
+		heapify(nums, i, 0);
+	}
+			
+}

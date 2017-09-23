@@ -30,6 +30,9 @@
 #include "lengthOfLongestSubstringTwoDistinct.h"
 #include "lengthLongestPath.h"
 #include "gameOfLife.h"
+#include "findMaximumXOR.h"
+#include "addTwoNumbers.h"
+#include "candy.h"
 
 using namespace std;
 

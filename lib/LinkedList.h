@@ -2,6 +2,8 @@
 
 #include "utils.h"
 
+using namespace std;
+
 struct ListNode
 {
 	int val;
@@ -9,6 +11,8 @@ struct ListNode
 	ListNode(int x) : val(x), next(NULL) {}
 	ListNode() : val(0), next(NULL) {}
 };
+
+inline ListNode* makeLinkedList(vector<int>& nums);
 
 class LinkedList
 {

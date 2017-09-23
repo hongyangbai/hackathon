@@ -93,6 +93,12 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new lengthLongestPath;
 	else if(strcmp(pname, "gameOfLife") == 0)
 		return new gameOfLife;
+	else if(strcmp(pname, "findMaximumXOR") == 0)
+		return new findMaximumXOR;
+	else if(strcmp(pname, "addTwoNumbers") == 0)
+		return new addTwoNumbers;
+	else if(strcmp(pname, "candy") == 0)
+		return new candy;
 	else
 		return nullptr;
 }
