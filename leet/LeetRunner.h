@@ -33,6 +33,9 @@
 #include "findMaximumXOR.h"
 #include "addTwoNumbers.h"
 #include "candy.h"
+#include "leastInterval.h"
+#include "largestRectangleArea.h"
+#include "insertInterval.h"
 
 using namespace std;
 

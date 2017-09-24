@@ -99,6 +99,12 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new addTwoNumbers;
 	else if(strcmp(pname, "candy") == 0)
 		return new candy;
+	else if(strcmp(pname, "leastInterval") == 0)
+		return new leastInterval;
+	else if(strcmp(pname, "largestRectangleArea") == 0)
+		return new largestRectangleArea;
+	else if(strcmp(pname, "insertInterval") == 0)
+		return new insertInterval;
 	else
 		return nullptr;
 }
