@@ -36,6 +36,8 @@
 #include "leastInterval.h"
 #include "largestRectangleArea.h"
 #include "insertInterval.h"
+#include "uniqueSubstring.h"
+#include "twoSum.h"
 
 using namespace std;
 

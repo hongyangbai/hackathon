@@ -27,6 +27,7 @@ void LeetRunner::run(const char* pname)
 	}
 	else
 	{
+		sort(availpnames.begin(), availpnames.end());
 		printf("Error: problem solution not created yet, available problems:\n");
 		for(int i = 0; i < availpnames.size(); ++i)
 			printf("%d. %s\n", i+1, availpnames[i].c_str());
@@ -105,6 +106,10 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new largestRectangleArea;
 	else if(strcmp(pname, "insertInterval") == 0)
 		return new insertInterval;
+	else if(strcmp(pname, "uniqueSubstring") == 0)
+		return new uniqueSubstring;
+	else if(strcmp(pname, "twoSum") == 0)
+		return new twoSum;
 	else
 		return nullptr;
 }
