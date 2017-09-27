@@ -38,6 +38,7 @@
 #include "insertInterval.h"
 #include "uniqueSubstring.h"
 #include "twoSum.h"
+#include "climbStairs.h"
 
 using namespace std;
 

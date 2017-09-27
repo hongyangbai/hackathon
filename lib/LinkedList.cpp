@@ -40,19 +40,3 @@ void LinkedList::insert(int val)
 
 	tail = newnode;
 }
-
-ListNode* makeLinkedList(vector<int>& nums)
-{
-	if(nums.size() == 0)	return NULL;
-
-	ListNode* head = new ListNode(nums[0]);
-	ListNode* prev = head;
-	for(int i = 1; i < nums.size(); ++i)
-	{
-		ListNode* cur = new ListNode(nums[i]);
-		
-		prev->next = cur;
-		prev = cur;
-	}
-	return head;
-}

@@ -110,6 +110,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new uniqueSubstring;
 	else if(strcmp(pname, "twoSum") == 0)
 		return new twoSum;
+	else if(strcmp(pname, "climbStairs") == 0)
+		return new climbStairs;
 	else
 		return nullptr;
 }
