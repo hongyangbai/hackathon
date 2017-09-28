@@ -10,3 +10,6 @@ vector<int> partition(vector<int> nums, int l, int r);
 
 // Heap Sort
 void heapSort(vector<int>& nums);
+
+// Bubble Sort
+void bubbleSort(vector<int>& nums);

@@ -42,6 +42,19 @@ vector<int> mergeSort(vector<int> nums)
 	return partition(nums, 0, nums.size()-1);
 }
 
+void bubbleSort(vector<int>& nums)
+{
+
+	for(int i = nums.size(); i >= 0; --i)
+	{
+		for(int j = 1; j < i; ++j)
+		{
+			if(nums[j] < nums[j-1])
+				swap(nums[j],nums[j-1]);
+		}
+	}
+}	
+
 void heapify(vector<int>& nums, int n, int i)
 {
 	int l = 2*i + 1;

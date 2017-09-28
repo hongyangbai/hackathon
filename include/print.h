@@ -79,3 +79,9 @@ inline void print(const vector<pair<int, int>>& v)
 
 	printf("\n");
 }
+
+inline ostream& operator<<(ostream& os, pair<int, int> p)
+{
+	os<<p.first<<", "<<p.second;
+	return os;
+}

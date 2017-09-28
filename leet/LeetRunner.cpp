@@ -112,6 +112,10 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new twoSum;
 	else if(strcmp(pname, "climbStairs") == 0)
 		return new climbStairs;
+	else if(strcmp(pname, "removeInvalidParentheses") == 0)
+		return new removeInvalidParentheses;
+	else if(strcmp(pname, "knightProbability") == 0)
+		return new knightProbability;
 	else
 		return nullptr;
 }

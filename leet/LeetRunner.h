@@ -39,6 +39,8 @@
 #include "uniqueSubstring.h"
 #include "twoSum.h"
 #include "climbStairs.h"
+#include "removeInvalidParentheses.h"
+#include "knightProbability.h"
 
 using namespace std;
 
