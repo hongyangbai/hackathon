@@ -13,3 +13,6 @@ void heapSort(vector<int>& nums);
 
 // Bubble Sort
 void bubbleSort(vector<int>& nums);
+
+// Quick Sort
+void quickSort(vector<int>& nums);
