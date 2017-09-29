@@ -41,6 +41,7 @@
 #include "climbStairs.h"
 #include "removeInvalidParentheses.h"
 #include "knightProbability.h"
+#include "combinationSum.h"
 
 using namespace std;
 

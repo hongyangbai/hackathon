@@ -16,3 +16,9 @@ void bubbleSort(vector<int>& nums);
 
 // Quick Sort
 void quickSort(vector<int>& nums);
+
+// Sort k-sorted
+vector<int> sortKSorted(vector<int>& nums, int k);
+
+// Insertion Sort
+void insertionSort(vector<int>& nums);

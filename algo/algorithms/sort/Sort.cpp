@@ -90,26 +90,70 @@ void heapify(vector<int>& nums, int n, int i)
 	int l = 2*i + 1;
 	int r = 2*i + 2;
 
-	int largest = i;
+	int smallest = i;
 
-	largest = (l<n && nums[l]>nums[largest]) ? l:largest;
-	largest = (r<n && nums[r]>nums[largest]) ? r:largest;
+	smallest = (l<n && nums[l]<nums[smallest]) ? l:smallest;
+	smallest = (r<n && nums[r]<nums[smallest]) ? r:smallest;
 		
-	if(largest != i)
+	if(smallest != i)
 	{
-		swap(nums[i], nums[largest]);
-		heapify(nums, n, largest);
+		swap(nums[i], nums[smallest]);
+		heapify(nums, n, smallest);
 	}
+}
+
+void makeHeap(vector<int>& nums)
+{
+	for(int i = nums.size()/2; i >= 0; --i)
+		heapify(nums, nums.size(), i);
 }
 
 void heapSort(vector<int>& nums)
 {
-	for(int i = nums.size()/2; i >= 0; --i)
-		heapify(nums, nums.size(), i);
+	makeHeap(nums);
 	for(int i = nums.size()-1; i>=0; --i)
 	{
 		swap(nums[i], nums[0]);
 		heapify(nums, i, 0);
 	}
 			
+}
+
+vector<int> sortKSorted(vector<int>& nums, int k)
+{
+	vector<int> heap(nums.begin(), nums.begin()+k);
+	makeHeap(heap);
+
+	vector<int> res;
+	for(int i = k; i < nums.size(); ++i)
+	{
+		res.push_back(heap[0]);
+		heap[0] = nums[i];
+		heapify(heap, k, 0);
+	}
+	for(int i = k-1; i >= 0; --i)
+	{
+		res.push_back(heap[0]);
+		heap[0] = heap[i];
+		heapify(heap, i, 0);
+	}
+	return res;
+}
+
+void insertionSort(vector<int>& nums)
+{
+	int j = 0;
+	for(int i = 1; i < nums.size(); ++i)
+	{
+		for(int k = 0; k <= j; ++k)
+		{
+			if(nums[i] < nums[k])
+			{
+				nums.insert(nums.begin()+k, nums[i]);
+				nums.erase(nums.begin()+i+1);
+				break;
+			}
+		}
+		++j;
+	}
 }

@@ -116,6 +116,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new removeInvalidParentheses;
 	else if(strcmp(pname, "knightProbability") == 0)
 		return new knightProbability;
+	else if(strcmp(pname, "combinationSum") == 0)
+		return new combinationSum;
 	else
 		return nullptr;
 }
