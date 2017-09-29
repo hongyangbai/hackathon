@@ -42,6 +42,7 @@
 #include "removeInvalidParentheses.h"
 #include "knightProbability.h"
 #include "combinationSum.h"
+#include "findMedianSortedArrays.h"
 
 using namespace std;
 

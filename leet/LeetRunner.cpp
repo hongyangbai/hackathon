@@ -118,6 +118,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new knightProbability;
 	else if(strcmp(pname, "combinationSum") == 0)
 		return new combinationSum;
+	else if(strcmp(pname, "findMedianSortedArrays") == 0)
+		return new findMedianSortedArrays;
 	else
 		return nullptr;
 }
