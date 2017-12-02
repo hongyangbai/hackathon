@@ -43,6 +43,15 @@
 #include "knightProbability.h"
 #include "combinationSum.h"
 #include "findMedianSortedArrays.h"
+#include "kthSmallest.h"
+#include "minSteps.h"
+#include "minSubArrayLen.h"
+#include "numberOfArithmeticSlices.h"
+#include "maxProfit.h"
+#include "canPartitionKSubsets.h"
+#include "minimumDeleteSum.h"
+#include "rob.h"
+#include "maxSumOfThreeSubarrays.h"
 
 using namespace std;
 

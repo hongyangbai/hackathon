@@ -120,6 +120,24 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new combinationSum;
 	else if(strcmp(pname, "findMedianSortedArrays") == 0)
 		return new findMedianSortedArrays;
+	else if(strcmp(pname, "kthSmallest") == 0)
+		return new kthSmallest;
+	else if(strcmp(pname, "minSteps") == 0)
+		return new minSteps;
+	else if(strcmp(pname, "minSubArrayLen") == 0)
+		return new minSubArrayLen;
+	else if(strcmp(pname, "numberOfArithmeticSlices") == 0)
+		return new numberOfArithmeticSlices;
+	else if(strcmp(pname, "maxProfit") == 0)
+		return new maxProfit;
+	else if(strcmp(pname, "minimumDeleteSum") == 0)
+		return new minimumDeleteSum;
+	else if(strcmp(pname, "canPartitionKSubsets") == 0)
+		return new canPartitionKSubsets;
+	else if(strcmp(pname, "rob") == 0)
+		return new rob;
+	else if(strcmp(pname, "maxSumOfThreeSubarrays") == 0)
+		return new maxSumOfThreeSubarrays;
 	else
 		return nullptr;
 }

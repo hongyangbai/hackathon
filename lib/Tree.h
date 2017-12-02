@@ -2,6 +2,8 @@
 
 #include "utils.h"
 
+using namespace std;
+
 struct TreeNode
 {
 	int val;
@@ -10,6 +12,9 @@ struct TreeNode
 
 	TreeNode(int v) : val(v), left(NULL), right(NULL) {}
 };
+
+TreeNode* createTree(vector<char*>& nums);
+void deleteTree(TreeNode* root);
 
 class Tree
 {
