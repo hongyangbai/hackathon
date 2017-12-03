@@ -138,6 +138,8 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new rob;
 	else if(strcmp(pname, "maxSumOfThreeSubarrays") == 0)
 		return new maxSumOfThreeSubarrays;
+	else if(strcmp(pname, "isInterleave") == 0)
+		return new isInterleave;
 	else
 		return nullptr;
 }

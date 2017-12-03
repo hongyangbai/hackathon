@@ -19,6 +19,20 @@ inline ostream& operator<<(ostream& os, const vector<T>& v)
 	return os;
 }
 
+template<>
+inline ostream& operator<<(ostream& os, const vector<bool>& v)
+{
+	for(int i = 0; i < v.size(); ++i)
+	{
+		if(i == v.size()-1)
+			os<< (v[i] ? "true":"false");
+		else
+			os<<(v[i] ? "true":"false")<<", ";
+	}
+	os<<endl;
+	return os;
+}
+
 template<typename T>
 inline ostream& operator<<(ostream& os, const vector<vector<T>>& v)
 {

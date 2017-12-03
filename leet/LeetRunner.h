@@ -52,6 +52,7 @@
 #include "minimumDeleteSum.h"
 #include "rob.h"
 #include "maxSumOfThreeSubarrays.h"
+#include "isInterleave.h"
 
 using namespace std;
 
