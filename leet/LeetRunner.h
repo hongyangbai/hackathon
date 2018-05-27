@@ -53,6 +53,9 @@
 #include "rob.h"
 #include "maxSumOfThreeSubarrays.h"
 #include "isInterleave.h"
+#include "kSubstring.h"
+#include "addOperators.h"
+#include "minMutation.h"
 
 using namespace std;
 

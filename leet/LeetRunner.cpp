@@ -140,6 +140,12 @@ Solution* LeetRunner::createNewSolution(const char* pname)
 		return new maxSumOfThreeSubarrays;
 	else if(strcmp(pname, "isInterleave") == 0)
 		return new isInterleave;
+	else if(strcmp(pname, "kSubstring") == 0)
+		return new kSubstring;
+	else if(strcmp(pname, "addOperators") == 0)
+		return new addOperators;
+	else if(strcmp(pname, "minMutation") == 0)
+		return new minMutation;
 	else
 		return nullptr;
 }
